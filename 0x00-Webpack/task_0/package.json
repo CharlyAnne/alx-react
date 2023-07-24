@@ -13,9 +13,18 @@
   "license": "ISC",
   "devDependencies": {
     "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
     "jquery": "^3.7.0"
+  },
+  "webpack": {
+    "mode": "development",
+    "entry": "./src/index.js",
+    "output": {
+      "filename": "main.js",
+      "path": "path.resolve(__dirname, 'dist')"
+    }
   }
 }
