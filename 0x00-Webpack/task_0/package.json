@@ -5,11 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve",
-    "build": "webpack"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "entry points",
+    "javascript",
+    "loaders",
+    "output",
+    "webpack plugins"
+  ],
+  "author": "Charlian Imoisili",
   "license": "ISC",
   "devDependencies": {
     "webpack": "^5.88.2",
@@ -18,13 +24,5 @@
   },
   "dependencies": {
     "jquery": "^3.7.0"
-  },
-  "webpack": {
-    "mode": "development",
-    "entry": "./src/index.js",
-    "output": {
-      "filename": "main.js",
-      "path": "path.resolve(__dirname, 'dist')"
-    }
   }
 }
