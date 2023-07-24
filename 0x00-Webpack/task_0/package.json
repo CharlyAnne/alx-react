@@ -25,5 +25,8 @@
   },
   "dependencies": {
     "jquery": "^3.7.0"
+  },
+  "webpack": {
+    "mode": "development"
   }
 }
