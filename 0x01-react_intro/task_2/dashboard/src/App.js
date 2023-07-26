@@ -11,17 +11,16 @@ function App() {
       </div>
       <div className="App-body">
         <p>Login to access the full dashboard</p>
-        <form>
-          <label for="email">
-            Email:
-            <input type="email" placeholder="Email" name="email" />
-          </label>
-          <label for="password">
-            Password:
-            <input type="password" placeholder="password" name="password" />
-          </label>
-          <button type="submit">OK</button>
-        </form>
+        <label htmlFor="email">Email: </label>
+        <input type="email" id="email" placeholder="Email" name="email" />
+        <label htmlFor="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="password"
+          name="password"
+        />
+        <button>OK</button>
       </div>
       <div className="App-footer">
         {/* <p>{getFootercopy(false)}</p> */}

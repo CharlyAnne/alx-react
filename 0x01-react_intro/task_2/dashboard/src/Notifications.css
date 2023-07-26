@@ -2,7 +2,18 @@
   --color-brand: #e01d3f;
 }
 
-div {
-  border: 2px solid var(--color-brand);
+.Notifications {
+  border: 2px dashed var(--color-brand);
   padding: 0.5rem;
+}
+.Notifications button img {
+  width: 15px;
+}
+
+[data-priority='default'] {
+  color: #260e6a;
+}
+
+[data-priority='urgent'] {
+  color: #e01d3f;
 }
