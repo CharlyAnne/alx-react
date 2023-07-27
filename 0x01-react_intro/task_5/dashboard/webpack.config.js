@@ -1,4 +1,5 @@
 const path = require('path');
+// const holberton_logo = require('./src/holberton-logo.jpg');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -25,6 +26,12 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            },
+          },
+          {
             loader: 'image-webpack-loader',
             options: {
               disable: true, // Disable image optimization for development
@@ -36,7 +43,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'dist', 'index.html'),
+      template: path.resolve(__dirname, 'public', 'index.html'),
     }),
   ],
   devServer: {
