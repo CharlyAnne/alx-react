@@ -1,0 +1,2 @@
+console.log('Hi, I am Barbie');
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnVuZGxlLmpzIiwibWFwcGluZ3MiOiJBQUFBQSxRQUFRQyxJQUFJIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdGFza181Ly4vc3JjL2luZGV4LmpzIl0sInNvdXJjZXNDb250ZW50IjpbImNvbnNvbGUubG9nKCdIaSwgSSBhbSBCYXJiaWUnKTtcbiJdLCJuYW1lcyI6WyJjb25zb2xlIiwibG9nIl0sInNvdXJjZVJvb3QiOiIifQ==
