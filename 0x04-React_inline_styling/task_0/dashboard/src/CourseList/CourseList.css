@@ -1,26 +1,10 @@
-table {
-  margin-top: 2em;
-  width: 90%;
-  height: fit-content;
-  border: 1px solid #ddd;
-  font-size: 1.2rem;
-  margin-bottom: 15em;
-}
-
 th {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid gray;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-th,
 td {
-  width: 80%;
-}
-
-table {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-tr:nth-child(2) {
-  text-align: left;
+  padding-left: 3px;
 }
