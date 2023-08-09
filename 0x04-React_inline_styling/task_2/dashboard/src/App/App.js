@@ -1,15 +1,14 @@
 import React from 'react';
-import { Stylesheet, css } from 'aphrodite';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import Notification from '../Notifications/Notifications';
 import Login from '../Login/Login';
 import CourseList from '../CourseList/CourseList';
-import Notification from '../Notifications/Notifications';
 import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom';
-import './App.css';
-import PropTypes from 'prop-types';
-import { getLatestNotification } from '../utils/utils';
 import BodySection from '../BodySection/BodySection';
+import { getLatestNotification } from '../utils/utils';
+import PropTypes from 'prop-types';
+import { StyleSheet, css } from 'aphrodite';
 
 class App extends React.Component {
   constructor(props) {
@@ -30,7 +29,7 @@ class App extends React.Component {
     ];
   }
 
-  handleKeyPress(e) {
+  handleKeyDown(e) {
     if (e.ctrlKey && e.key === 'h') {
       e.preventDefault();
       alert('Logging you out');
@@ -94,9 +93,7 @@ const footerStyles = StyleSheet.create({
 
 App.defaultProps = {
   isLoggedIn: false,
-  logOut: () => {
-    return;
-  },
+  logOut: () => {},
 };
 
 App.propTypes = {

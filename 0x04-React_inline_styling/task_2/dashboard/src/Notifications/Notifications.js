@@ -1,5 +1,4 @@
 import React from 'react';
-import './Notifications.css';
 import closeIcon from '../assets/close-icon.png';
 import NotificationItem from './NotificationItem';
 import PropeTypes from 'prop-types';
@@ -25,7 +24,9 @@ class Notifications extends React.Component {
   render() {
     return (
       <>
-        <div className="menuItem">Your notifications</div>
+        <div className={css(notificationStyles.menuItem)}>
+          Your notifications
+        </div>
         {this.props.displayDrawer ? (
           <div className={css(notificationStyles.notifications)}>
             <button
@@ -87,6 +88,9 @@ const notificationStyles = StyleSheet.create({
     right: '7px',
     marginTop: '12px',
     zIndex: '100',
+  },
+  menuItem: {
+    textAlign: 'right',
   },
 });
 
