@@ -1,7 +1,7 @@
 import React from 'react';
 import closeIcon from '../assets/close-icon.png';
 import NotificationItem from './NotificationItem';
-import PropeTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import NotificationItemShape from './NotificationItemShape';
 import { StyleSheet, css } from 'aphrodite';
 
@@ -13,7 +13,9 @@ class Notifications extends React.Component {
 
   shouldComponentUpdate(nextProps) {
     return (
-      nextProps.listNotifications.length > this.props.listNotifications.length
+      nextProps.listNotifications.length >
+        this.props.listNotifications.length ||
+      this.props.displayDrawer != nextProps.displayDrawer
     );
   }
 
@@ -25,7 +27,10 @@ class Notifications extends React.Component {
     return (
       <>
         {!this.props.displayDrawer ? (
-          <div className={css(notificationStyles.menuItem)}>
+          <div
+            className={css(notificationStyles.menuItem)}
+            onClick={this.props.handleDisplayDrawer}
+          >
             Your notifications
           </div>
         ) : (
@@ -47,6 +52,7 @@ class Notifications extends React.Component {
               className={css(notificationStyles.button)}
               onClick={(e) => {
                 console.log('Close button has been clicked');
+                this.props.handleHideDrawer();
               }}
             >
               <img src={closeIcon} alt="close icon" width="15px" />
@@ -140,11 +146,15 @@ const notificationStyles = StyleSheet.create({
 Notifications.defaultProps = {
   displayDrawer: false,
   listNotifications: [],
+  handleHideDrawer: () => {},
+  handleDisplayDrawer: () => {},
 };
 
 Notifications.propTypes = {
-  displayDrawer: PropeTypes.bool,
-  listNotifications: PropeTypes.arrayOf(NotificationItemShape),
+  displayDrawer: PropTypes.bool,
+  listNotifications: PropTypes.arrayOf(NotificationItemShape),
+  handleHideDrawer: PropTypes.func,
+  handleDisplayDrawer: PropTypes.func,
 };
 
 export default Notifications;

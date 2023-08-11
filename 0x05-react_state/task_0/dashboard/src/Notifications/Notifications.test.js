@@ -162,3 +162,28 @@ describe('Testing the notification class Component re-rendering', () => {
     expect(wrapper.find('NotificationItem').length).toBe(4);
   });
 });
+
+describe('Testing Notifications Component Drawer Display handlers ', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+    wrapper = mount(
+      <Notifications
+        handleDisplayDrawer={jest.fn()}
+        handleHideDrawer={jest.fn()}
+      />
+    );
+  });
+
+  it('verify that clicking on the menu item calls handleDisplayDrawer', () => {
+    wrapper.find('div').at(0).simulate('click');
+    expect(wrapper.props().handleDisplayDrawer).toBeCalled();
+  });
+
+  it('verify that clicking on the button calls handleHideDrawer', () => {
+    wrapper.setProps({ displayDrawer: true });
+    wrapper.find('button').at(0).simulate('click');
+    expect(wrapper.props().handleHideDrawer).toBeCalled();
+  });
+});
