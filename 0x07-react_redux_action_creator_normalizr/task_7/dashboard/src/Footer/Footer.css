@@ -1,7 +1,5 @@
-.App-footer {
-  border-top: 4px solid red;
-  font-size: 1.4rem;
-  padding: 0.5em;
+.footer {
   text-align: center;
+  margin-bottom: 2rem;
   font-style: italic;
 }
